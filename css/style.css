@@ -119,7 +119,7 @@ input::placeholder{
 }
 @media (max-width: 510px) {
     .form{
-        width: 95%;
+        width: 90%;
     }
     input{
         font-size: 12px;
