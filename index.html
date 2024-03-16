@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
 </head>
 <body>
     <div class="container">
         <form class="form">
+            <div class="btn" onclick="dark()">
+                <i class="bi bi-moon" id="btn"></i>
+            </div>
             <div class="details">
                 <div class="top">
                     <div class="field">
@@ -45,5 +49,19 @@
             </div>
         </div>
     </div>
+    <script>
+        let button = document.getElementById("btn");
+        let content = document.querySelector(".container");
+        function dark() {
+            content.classList.toggle("dark")
+            if (button.classList[1] == "bi-moon"){
+                button.classList.replace("bi-moon","bi-sun")
+            }
+            else{
+                button.classList.replace("bi-sun","bi-moon")
+            }
+        }
+
+    </script>
 </body>
 </html>

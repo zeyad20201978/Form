@@ -11,18 +11,32 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../images/3.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    background-color: #f1f1f1;
 }
 
 .form{
     width: 500px;
     height: fit-content;
-    background-color: #fff3;
-    backdrop-filter: blur(5px);
+    background-color: #fff;
+    box-shadow: #0002 0 0 10px 1px;
     padding: 50px 30px;
+    position: relative;
+}
+.form .btn{
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
 }
 .form .details{
     width: 100%;
@@ -30,7 +44,7 @@
 label{
     display: block;
     text-transform: capitalize;
-    color: white;
+    color: black;
     width: fit-content;
 }
 label.star::after{
@@ -41,14 +55,16 @@ label.star::after{
 input{
     width: 100%;
     height: 30px;
-    background-color: #fff3;
-    border: none;
+    background-color: #fff;
+    border: 1px solid #111;
     padding-left: 10px ;
+    transition: border-right 0.3s;
 }
 input::placeholder{
-    color: #fff8;
+    color: #555;
     text-transform: capitalize;
 }
+
 .form .details .top{
     width: 100%;
     display: flex;
@@ -79,16 +95,13 @@ input::placeholder{
     width: 100%;
     height: 88px;
     resize: none;
-    background-color: #fff3;
-    border: none;
+    background-color: #fff;
+    border: 1px solid #111;
     padding: 10px 0 0 10px;
+    transition: border-left 0.3s;
+
 }
-input:focus{
-    background-color: white;
-}
-.form .details .bottom .right .field textarea:focus{
-    background-color: white;
-}
+
 .form .details .bottom .right .field{
     width: 100%;
 }
@@ -138,4 +151,41 @@ input:focus{
         width: 100%;
     } */
     
+}
+.dark{
+    background: #1f1f1f;
+}
+.dark .form{
+    background: #000;
+    box-shadow: #fff2 0 0 10px 1px;
+}
+.dark .form .btn{
+    color: black;
+    background-color: #fff;
+}
+.dark .form label{
+    color: white;
+}
+.dark .form input{
+    border-color: white ;
+    background-color: #000;
+    color: white;
+}
+.dark .form .bottom .right .field textarea{
+    border-color: white ;
+    background-color: #000;
+    color: white;
+}
+.dark .form input::placeholder{
+    color: #fff5;
+}
+
+.form .details input:focus{
+    border-right: #3a6cf4 5px solid ;
+    
+}
+.form .details .bottom .right .field textarea:focus{
+    /* background-color: white; */
+    border-left: #3a6cf4 5px solid ;
+
 }
